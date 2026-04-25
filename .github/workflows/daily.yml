@@ -48,3 +48,14 @@ jobs:
             git commit -m "chore: update daily signal $(date -u +%Y-%m-%d)"
             git push
           fi
+
+      - name: Trigger Render deploy
+        env:
+          HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$HOOK" ]; then
+            echo "RENDER_DEPLOY_HOOK secret not set, skipping"
+          else
+            echo "Pinging Render deploy hook..."
+            curl -fsS -X POST "$HOOK" || echo "Deploy hook ping failed (non-fatal)"
+          fi
