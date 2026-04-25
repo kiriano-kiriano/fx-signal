@@ -21,11 +21,12 @@ def format_signal_message(today_str: str, signals: list, open_positions: list,
         lines.append(f"🔥 新規シグナル: {len(signals)}件")
         for s in signals:
             dir_label = "🟢買い" if s["direction"] == 1 else "🔴売り"
+            tp_str = f"{s['target_price']:.3f}" if s.get('target_price') else "—"
             lines.append(
                 f"  {s['pair']} {dir_label} | "
                 f"目安 {s['entry_price_est']:.3f} / "
                 f"SL {s['stop_price']:.3f} / "
-                f"TP {s['target_price']:.3f if s['target_price'] else '—'}"
+                f"TP {tp_str}"
             )
 
     if open_positions:
@@ -52,7 +53,10 @@ def format_signal_message(today_str: str, signals: list, open_positions: list,
 
     if not signals and not open_positions and not yesterday_results:
         lines.append("")
-        lines.append("💤 シグナルなし。今日はアクション不要。")
+        lines.append("💤 **今日はシグナルなし** — アクション不要、お休みでOK")
+        lines.append("")
+        lines.append("レンジ相場の歪み待ち。BB下限/上限へのタッチが発生していません。")
+        lines.append("無理に取引せず、シグナル発火日を待ちましょう。")
 
     return "\n".join(lines)
 

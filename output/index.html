@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FX Daily Signal — 2026年04月25日 05:38</title>
+<title>FX Daily Signal — 2026年04月25日 06:29</title>
 <style>
   * { box-sizing: border-box; }
   body { font-family: -apple-system, "Hiragino Sans", "Yu Gothic", sans-serif;
@@ -88,6 +88,25 @@
   @media (max-width: 600px) {
     .gauge-card.wide { grid-column: span 1; }
   }
+
+  .freshness-badge { display: inline-block; padding: 4px 10px; border-radius: 999px;
+                     background: #161b22; border: 1px solid #30363d; margin-left: 12px;
+                     font-size: 11px; vertical-align: middle; }
+  .freshness-dot { font-size: 14px; margin-right: 4px; }
+  .freshness-dot.fresh { color: #3fb950; }
+  .freshness-dot.warn { color: #d29922; }
+  .freshness-dot.stale { color: #f85149; animation: pulse 1.5s ease-in-out infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+  .freshness-relative { color: #7d8590; margin-left: 6px; }
+
+  .rules-panel { background: #161b22; border: 1px solid #30363d; border-radius: 10px;
+                 padding: 12px 18px; margin-bottom: 20px; border-left: 4px solid #f0883e; }
+  .rules-panel summary { font-size: 14px; font-weight: 600; color: #f0883e; cursor: pointer;
+                         user-select: none; padding: 4px 0; }
+  .rules-panel summary:hover { color: #ffa657; }
+  .rules-panel ul { margin: 8px 0 4px; padding-left: 20px; }
+  .rules-panel li { font-size: 12px; color: #c9d1d9; padding: 3px 0; line-height: 1.5; }
+  .rules-panel li b { color: #e6edf3; }
 </style>
 </head>
 <body>
@@ -95,7 +114,12 @@
 <div class="topbar">
   <div>
     <h1>📊 FX Daily Signal <span class="badge">実データ</span></h1>
-    <small>2026年04月25日 05:38 更新</small>
+    <small>2026年04月25日 06:29 更新</small>
+    <span class="freshness-badge" data-updated="2026-04-25T06:29:21.551601">
+      <span class="freshness-dot" id="freshDot">●</span>
+      <span id="freshLabel">最新</span>
+      <small class="freshness-relative" id="freshRelative">数分前</small>
+    </span>
   </div>
   <nav class="nav">
     <a href="workflow.html">▶ 1日の運用イメージ</a>
@@ -105,17 +129,29 @@
 
 <div class="status-banner idle">💤 待機中。シグナルなし</div>
 
+<details class="rules-panel" open>
+  <summary>🚨 運用中の絶対ルール（必ず守る）</summary>
+  <ul>
+    <li>✅ <b>シグナル通り淡々と発注する</b> — 裁量介入は期待値を下げるだけ</li>
+    <li>✅ <b>SL/TPは絶対に動かさない</b> — 動かしたくなる衝動が中級者を破滅させる</li>
+    <li>✅ <b>5連敗したら一時停止</b> — 新規ポジ禁止、ルール再検証</li>
+    <li>✅ <b>ロットは推奨値を死守</b> — 「今日だけ大きめ」は禁句</li>
+    <li>❌ <b>シグナル無しの日に自分で売買しない</b> — 待機も戦略のうち</li>
+    <li>❌ <b>含み損で「もう少し待てば戻る」は厳禁</b> — SLヒットで自動決済が正解</li>
+  </ul>
+</details>
+
 <div class="gauges">
   <div class="gauge-card">
     <div style="font-size:11px;color:#7d8590;margin-bottom:4px;">使用ポジ枠</div>
     
     <svg viewBox="0 0 200 200" class="gauge-svg">
       <defs>
-        <radialGradient id="needle-grad-278328375891440" cx="50%" cy="50%" r="50%">
+        <radialGradient id="needle-grad-248164962718672" cx="50%" cy="50%" r="50%">
           <stop offset="0%" stop-color="#fff"/>
           <stop offset="100%" stop-color="#aaa"/>
         </radialGradient>
-        <filter id="shadow-278328375891440">
+        <filter id="shadow-248164962718672">
           <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.3"/>
         </filter>
       </defs>
@@ -124,8 +160,8 @@
       <line x1="46.3" y1="163.7" x2="39.2" y2="170.8" stroke="#7d8590" stroke-width="1.5"/><line x1="27.7" y1="133.5" x2="18.2" y2="136.6" stroke="#7d8590" stroke-width="1.5"/><line x1="24.9" y1="98.1" x2="15.1" y2="96.5" stroke="#7d8590" stroke-width="1.5"/><line x1="38.5" y1="65.3" x2="30.4" y2="59.5" stroke="#7d8590" stroke-width="1.5"/><line x1="65.5" y1="42.3" x2="61.0" y2="33.4" stroke="#7d8590" stroke-width="1.5"/><line x1="100.0" y1="34.0" x2="100.0" y2="24.0" stroke="#7d8590" stroke-width="1.5"/><line x1="134.5" y1="42.3" x2="139.0" y2="33.4" stroke="#7d8590" stroke-width="1.5"/><line x1="161.5" y1="65.3" x2="169.6" y2="59.5" stroke="#7d8590" stroke-width="1.5"/><line x1="175.1" y1="98.1" x2="184.9" y2="96.5" stroke="#7d8590" stroke-width="1.5"/><line x1="172.3" y1="133.5" x2="181.8" y2="136.6" stroke="#7d8590" stroke-width="1.5"/><line x1="153.7" y1="163.7" x2="160.8" y2="170.8" stroke="#7d8590" stroke-width="1.5"/>
       <line x1="105.7" y1="104.3" x2="49.1" y2="160.9"
             stroke="#fff" stroke-width="3" stroke-linecap="round"
-            filter="url(#shadow-278328375891440)"/>
-      <circle cx="100.0" cy="110.0" r="8" fill="url(#needle-grad-278328375891440)" stroke="#444" stroke-width="1"/>
+            filter="url(#shadow-248164962718672)"/>
+      <circle cx="100.0" cy="110.0" r="8" fill="url(#needle-grad-248164962718672)" stroke="#444" stroke-width="1"/>
       <text x="100.0" y="154.0" text-anchor="middle" fill="#e6edf3"
             font-size="22" font-weight="700">0.0%</text>
       <text x="100.0" y="172.0" text-anchor="middle" fill="#7d8590" font-size="11">ポジション使用率</text>
@@ -137,11 +173,11 @@
     
     <svg viewBox="0 0 200 200" class="gauge-svg">
       <defs>
-        <radialGradient id="needle-grad-278328375890608" cx="50%" cy="50%" r="50%">
+        <radialGradient id="needle-grad-248164962718832" cx="50%" cy="50%" r="50%">
           <stop offset="0%" stop-color="#fff"/>
           <stop offset="100%" stop-color="#aaa"/>
         </radialGradient>
-        <filter id="shadow-278328375890608">
+        <filter id="shadow-248164962718832">
           <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.3"/>
         </filter>
       </defs>
@@ -150,8 +186,8 @@
       <line x1="46.3" y1="163.7" x2="39.2" y2="170.8" stroke="#7d8590" stroke-width="1.5"/><line x1="27.7" y1="133.5" x2="18.2" y2="136.6" stroke="#7d8590" stroke-width="1.5"/><line x1="24.9" y1="98.1" x2="15.1" y2="96.5" stroke="#7d8590" stroke-width="1.5"/><line x1="38.5" y1="65.3" x2="30.4" y2="59.5" stroke="#7d8590" stroke-width="1.5"/><line x1="65.5" y1="42.3" x2="61.0" y2="33.4" stroke="#7d8590" stroke-width="1.5"/><line x1="100.0" y1="34.0" x2="100.0" y2="24.0" stroke="#7d8590" stroke-width="1.5"/><line x1="134.5" y1="42.3" x2="139.0" y2="33.4" stroke="#7d8590" stroke-width="1.5"/><line x1="161.5" y1="65.3" x2="169.6" y2="59.5" stroke="#7d8590" stroke-width="1.5"/><line x1="175.1" y1="98.1" x2="184.9" y2="96.5" stroke="#7d8590" stroke-width="1.5"/><line x1="172.3" y1="133.5" x2="181.8" y2="136.6" stroke="#7d8590" stroke-width="1.5"/><line x1="153.7" y1="163.7" x2="160.8" y2="170.8" stroke="#7d8590" stroke-width="1.5"/>
       <line x1="94.4" y1="115.7" x2="150.6" y2="58.8"
             stroke="#fff" stroke-width="3" stroke-linecap="round"
-            filter="url(#shadow-278328375890608)"/>
-      <circle cx="100.0" cy="110.0" r="8" fill="url(#needle-grad-278328375890608)" stroke="#444" stroke-width="1"/>
+            filter="url(#shadow-248164962718832)"/>
+      <circle cx="100.0" cy="110.0" r="8" fill="url(#needle-grad-248164962718832)" stroke="#444" stroke-width="1"/>
       <text x="100.0" y="154.0" text-anchor="middle" fill="#e6edf3"
             font-size="22" font-weight="700">66.5%</text>
       <text x="100.0" y="172.0" text-anchor="middle" fill="#7d8590" font-size="11">平均勝率</text>
@@ -163,11 +199,11 @@
     
     <svg viewBox="0 0 200 200" class="gauge-svg">
       <defs>
-        <radialGradient id="needle-grad-278328376038800" cx="50%" cy="50%" r="50%">
+        <radialGradient id="needle-grad-248164962850640" cx="50%" cy="50%" r="50%">
           <stop offset="0%" stop-color="#fff"/>
           <stop offset="100%" stop-color="#aaa"/>
         </radialGradient>
-        <filter id="shadow-278328376038800">
+        <filter id="shadow-248164962850640">
           <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.3"/>
         </filter>
       </defs>
@@ -176,8 +212,8 @@
       <line x1="46.3" y1="163.7" x2="39.2" y2="170.8" stroke="#7d8590" stroke-width="1.5"/><line x1="27.7" y1="133.5" x2="18.2" y2="136.6" stroke="#7d8590" stroke-width="1.5"/><line x1="24.9" y1="98.1" x2="15.1" y2="96.5" stroke="#7d8590" stroke-width="1.5"/><line x1="38.5" y1="65.3" x2="30.4" y2="59.5" stroke="#7d8590" stroke-width="1.5"/><line x1="65.5" y1="42.3" x2="61.0" y2="33.4" stroke="#7d8590" stroke-width="1.5"/><line x1="100.0" y1="34.0" x2="100.0" y2="24.0" stroke="#7d8590" stroke-width="1.5"/><line x1="134.5" y1="42.3" x2="139.0" y2="33.4" stroke="#7d8590" stroke-width="1.5"/><line x1="161.5" y1="65.3" x2="169.6" y2="59.5" stroke="#7d8590" stroke-width="1.5"/><line x1="175.1" y1="98.1" x2="184.9" y2="96.5" stroke="#7d8590" stroke-width="1.5"/><line x1="172.3" y1="133.5" x2="181.8" y2="136.6" stroke="#7d8590" stroke-width="1.5"/><line x1="153.7" y1="163.7" x2="160.8" y2="170.8" stroke="#7d8590" stroke-width="1.5"/>
       <line x1="103.3" y1="117.3" x2="70.7" y2="44.2"
             stroke="#fff" stroke-width="3" stroke-linecap="round"
-            filter="url(#shadow-278328376038800)"/>
-      <circle cx="100.0" cy="110.0" r="8" fill="url(#needle-grad-278328376038800)" stroke="#444" stroke-width="1"/>
+            filter="url(#shadow-248164962850640)"/>
+      <circle cx="100.0" cy="110.0" r="8" fill="url(#needle-grad-248164962850640)" stroke="#444" stroke-width="1"/>
       <text x="100.0" y="154.0" text-anchor="middle" fill="#e6edf3"
             font-size="22" font-weight="700">12.3%</text>
       <text x="100.0" y="172.0" text-anchor="middle" fill="#7d8590" font-size="11">最大DD (バックテスト)</text>
@@ -538,5 +574,40 @@
         </tbody>
 </table>
 
+<script>
+(function () {
+  var el = document.querySelector('.freshness-badge');
+  if (!el) return;
+  var iso = el.getAttribute('data-updated');
+  if (!iso) return;
+  var updated = new Date(iso);
+  var now = new Date();
+  var minsAgo = Math.round((now - updated) / 60000);
+  var hoursAgo = minsAgo / 60;
+
+  var dot = document.getElementById('freshDot');
+  var label = document.getElementById('freshLabel');
+  var relative = document.getElementById('freshRelative');
+
+  // 相対時間
+  var rel;
+  if (minsAgo < 60) rel = minsAgo + '分前';
+  else if (hoursAgo < 48) rel = Math.round(hoursAgo) + '時間前';
+  else rel = Math.round(hoursAgo / 24) + '日前';
+  relative.textContent = rel;
+
+  // 鮮度判定（NY close = 06-07 JST。それ以降の朝の更新で 25時間以内なら最新扱い）
+  if (hoursAgo < 25) {
+    dot.className = 'freshness-dot fresh';
+    label.textContent = '最新';
+  } else if (hoursAgo < 49) {
+    dot.className = 'freshness-dot warn';
+    label.textContent = '少し古い';
+  } else {
+    dot.className = 'freshness-dot stale';
+    label.textContent = '⚠️ 異常 — 更新確認を';
+  }
+})();
+</script>
 </body>
 </html>

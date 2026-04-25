@@ -152,6 +152,7 @@ def render_daily_dashboard(payload: dict) -> str:
     account_balance = meta.get("account_balance", 100_000)
     leverage = meta.get("max_leverage", 20)
     today_str = dt.datetime.now().strftime("%Y年%m月%d日 %H:%M")
+    generated_iso = meta.get("generated_at", dt.datetime.now().isoformat())
 
     # 全ペアの集計
     total_equity = sum(s["current_equity"] for s in pairs_state.values())
@@ -323,6 +324,25 @@ def render_daily_dashboard(payload: dict) -> str:
   @media (max-width: 600px) {{
     .gauge-card.wide {{ grid-column: span 1; }}
   }}
+
+  .freshness-badge {{ display: inline-block; padding: 4px 10px; border-radius: 999px;
+                     background: #161b22; border: 1px solid #30363d; margin-left: 12px;
+                     font-size: 11px; vertical-align: middle; }}
+  .freshness-dot {{ font-size: 14px; margin-right: 4px; }}
+  .freshness-dot.fresh {{ color: #3fb950; }}
+  .freshness-dot.warn {{ color: #d29922; }}
+  .freshness-dot.stale {{ color: #f85149; animation: pulse 1.5s ease-in-out infinite; }}
+  @keyframes pulse {{ 0%, 100% {{ opacity: 1; }} 50% {{ opacity: 0.4; }} }}
+  .freshness-relative {{ color: #7d8590; margin-left: 6px; }}
+
+  .rules-panel {{ background: #161b22; border: 1px solid #30363d; border-radius: 10px;
+                 padding: 12px 18px; margin-bottom: 20px; border-left: 4px solid #f0883e; }}
+  .rules-panel summary {{ font-size: 14px; font-weight: 600; color: #f0883e; cursor: pointer;
+                         user-select: none; padding: 4px 0; }}
+  .rules-panel summary:hover {{ color: #ffa657; }}
+  .rules-panel ul {{ margin: 8px 0 4px; padding-left: 20px; }}
+  .rules-panel li {{ font-size: 12px; color: #c9d1d9; padding: 3px 0; line-height: 1.5; }}
+  .rules-panel li b {{ color: #e6edf3; }}
 </style>
 </head>
 <body>
@@ -331,6 +351,11 @@ def render_daily_dashboard(payload: dict) -> str:
   <div>
     <h1>📊 FX Daily Signal <span class="badge">{src_badge}</span></h1>
     <small>{today_str} 更新</small>
+    <span class="freshness-badge" data-updated="{generated_iso}">
+      <span class="freshness-dot" id="freshDot">●</span>
+      <span id="freshLabel">最新</span>
+      <small class="freshness-relative" id="freshRelative">数分前</small>
+    </span>
   </div>
   <nav class="nav">
     <a href="workflow.html">▶ 1日の運用イメージ</a>
@@ -339,6 +364,18 @@ def render_daily_dashboard(payload: dict) -> str:
 </div>
 
 <div class="status-banner {status_class}">{status_msg}</div>
+
+<details class="rules-panel" open>
+  <summary>🚨 運用中の絶対ルール（必ず守る）</summary>
+  <ul>
+    <li>✅ <b>シグナル通り淡々と発注する</b> — 裁量介入は期待値を下げるだけ</li>
+    <li>✅ <b>SL/TPは絶対に動かさない</b> — 動かしたくなる衝動が中級者を破滅させる</li>
+    <li>✅ <b>5連敗したら一時停止</b> — 新規ポジ禁止、ルール再検証</li>
+    <li>✅ <b>ロットは推奨値を死守</b> — 「今日だけ大きめ」は禁句</li>
+    <li>❌ <b>シグナル無しの日に自分で売買しない</b> — 待機も戦略のうち</li>
+    <li>❌ <b>含み損で「もう少し待てば戻る」は厳禁</b> — SLヒットで自動決済が正解</li>
+  </ul>
+</details>
 
 <div class="gauges">
   <div class="gauge-card">
@@ -378,5 +415,40 @@ def render_daily_dashboard(payload: dict) -> str:
   <tbody>{trades_html or '<tr><td colspan="8" style="text-align:center;color:#7d8590;padding:20px;">まだトレード履歴がありません</td></tr>'}</tbody>
 </table>
 
+<script>
+(function () {{
+  var el = document.querySelector('.freshness-badge');
+  if (!el) return;
+  var iso = el.getAttribute('data-updated');
+  if (!iso) return;
+  var updated = new Date(iso);
+  var now = new Date();
+  var minsAgo = Math.round((now - updated) / 60000);
+  var hoursAgo = minsAgo / 60;
+
+  var dot = document.getElementById('freshDot');
+  var label = document.getElementById('freshLabel');
+  var relative = document.getElementById('freshRelative');
+
+  // 相対時間
+  var rel;
+  if (minsAgo < 60) rel = minsAgo + '分前';
+  else if (hoursAgo < 48) rel = Math.round(hoursAgo) + '時間前';
+  else rel = Math.round(hoursAgo / 24) + '日前';
+  relative.textContent = rel;
+
+  // 鮮度判定（NY close = 06-07 JST。それ以降の朝の更新で 25時間以内なら最新扱い）
+  if (hoursAgo < 25) {{
+    dot.className = 'freshness-dot fresh';
+    label.textContent = '最新';
+  }} else if (hoursAgo < 49) {{
+    dot.className = 'freshness-dot warn';
+    label.textContent = '少し古い';
+  }} else {{
+    dot.className = 'freshness-dot stale';
+    label.textContent = '⚠️ 異常 — 更新確認を';
+  }}
+}})();
+</script>
 </body>
 </html>"""

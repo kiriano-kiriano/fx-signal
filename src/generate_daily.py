@@ -146,7 +146,8 @@ def main():
     msg = format_signal_message(today_str, new_signals, open_positions, yesterday_results)
     print("\n=== Notification message ===\n" + msg)
 
-    notify_result = notify_all(msg, only_if_action=True, has_action=has_action)
+    # 毎日通知（無音日も「今日は売買NG」を伝える）
+    notify_result = notify_all(msg, only_if_action=False, has_action=has_action)
     print(f"\nnotification result: {notify_result}")
 
     print(f"\n=== generate_daily completed: {dt.datetime.now()} ===")
