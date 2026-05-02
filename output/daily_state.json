@@ -10,39 +10,28 @@
     "account_balance": 100000.0,
     "risk_per_trade": 0.02,
     "max_leverage": 20.0,
-    "generated_at": "2026-05-01T07:37:47.628801"
+    "generated_at": "2026-05-02T06:21:47.212293"
   },
   "pairs": {
     "USDJPY": {
       "pair": "USDJPY",
-      "current_equity": 2511043.517908463,
+      "current_equity": 2801971.357359156,
       "today_signal": null,
-      "open_position": {
+      "open_position": null,
+      "yesterday_result": {
         "entry_date": "2026-04-30T00:00:00",
+        "exit_date": "2026-05-01T00:00:00",
         "direction": -1,
         "entry_price": 160.1929931640625,
-        "current_price": 160.1840057373047,
+        "exit_price": 159.24500045776367,
         "stop_price": 160.18201521454915,
         "target_price": 159.24500045776367,
         "leverage": 20.0,
-        "unrealized_pnl_pct": 0.0011220748898309154,
-        "hold_days": 0
+        "pnl_pct": 0.11585933791104397,
+        "reason": "target",
+        "hold_days": 1
       },
-      "yesterday_result": null,
       "recent_trades": [
-        {
-          "entry_date": "2023-05-19T00:00:00",
-          "exit_date": "2023-05-22T00:00:00",
-          "direction": -1,
-          "entry_price": 138.6199951171875,
-          "exit_price": 138.23657196727305,
-          "stop_price": 138.23657196727305,
-          "target_price": 135.10855026245116,
-          "leverage": 7.230653399416121,
-          "pnl_pct": 0.01895676617311905,
-          "reason": "stop",
-          "hold_days": 3
-        },
         {
           "entry_date": "2023-10-27T00:00:00",
           "exit_date": "2023-10-30T00:00:00",
@@ -417,6 +406,19 @@
           "target_price": 159.1987503051758,
           "leverage": 2.6635461602743544,
           "pnl_pct": 0.0004309529300069365,
+          "reason": "target",
+          "hold_days": 1
+        },
+        {
+          "entry_date": "2026-04-30T00:00:00",
+          "exit_date": "2026-05-01T00:00:00",
+          "direction": -1,
+          "entry_price": 160.1929931640625,
+          "exit_price": 159.24500045776367,
+          "stop_price": 160.18201521454915,
+          "target_price": 159.24500045776367,
+          "leverage": 20.0,
+          "pnl_pct": 0.11585933791104397,
           "reason": "target",
           "hold_days": 1
         }
@@ -1141,23 +1143,27 @@
         {
           "date": "2026-04-30",
           "equity": 2511043.517908463
+        },
+        {
+          "date": "2026-05-31",
+          "equity": 2801971.357359156
         }
       ],
       "metrics": {
-        "trades": 155,
-        "total_return_pct": 2411.043517908463,
-        "cagr_pct": 23.98051457335859,
-        "sharpe": 1.1637079292156287,
+        "trades": 156,
+        "total_return_pct": 2701.971357359156,
+        "cagr_pct": 24.88514747741286,
+        "sharpe": 1.1887516277750694,
         "max_dd_pct": -12.330891862657834,
-        "win_rate_pct": 66.45161290322581,
-        "payoff": 2.400771300103975,
-        "expectancy_pct": 2.2476291548516514,
-        "avg_win_pct": 4.283025065661173,
+        "win_rate_pct": 66.66666666666666,
+        "payoff": 2.440131990554467,
+        "expectancy_pct": 2.307490082007118,
+        "avg_win_pct": 4.353245341867359,
         "avg_loss_pct": -1.7840204377133624,
-        "profit_factor": 4.7553739213598
+        "profit_factor": 4.880263981108935
       },
-      "last_close": 160.1840057373047,
-      "last_date": "2026-04-30T00:00:00"
+      "last_close": 157.0330047607422,
+      "last_date": "2026-05-01T00:00:00"
     },
     "EURJPY": {
       "pair": "EURJPY",
@@ -2296,7 +2302,7 @@
         "avg_loss_pct": -1.6629469946736852,
         "profit_factor": 5.865885562341713
       },
-      "last_close": 183.66600036621094,
+      "last_close": 184.06300354003906,
       "last_date": "2026-05-01T00:00:00"
     },
     "GBPJPY": {
@@ -3436,7 +3442,7 @@
         "avg_loss_pct": -1.6480983824973028,
         "profit_factor": 5.745870018381916
       },
-      "last_close": 212.9029998779297,
+      "last_close": 213.21200561523438,
       "last_date": "2026-05-01T00:00:00"
     }
   }
