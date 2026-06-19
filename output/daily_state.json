@@ -10,7 +10,7 @@
     "account_balance": 100000.0,
     "risk_per_trade": 0.02,
     "max_leverage": 20.0,
-    "generated_at": "2026-06-17T23:56:55.265821"
+    "generated_at": "2026-06-19T00:09:14.935947"
   },
   "pairs": {
     "USDJPY": {
@@ -1150,7 +1150,7 @@
         "avg_loss_pct": -1.7840204377058946,
         "profit_factor": 4.880263981132918
       },
-      "last_close": 160.61599731445312,
+      "last_close": 160.60000610351562,
       "last_date": "2026-06-18T00:00:00"
     },
     "EURJPY": {
@@ -2280,8 +2280,8 @@
       "metrics": {
         "trades": 163,
         "total_return_pct": 3929.082464278573,
-        "cagr_pct": 27.952252753787942,
-        "sharpe": 1.1687391029273817,
+        "cagr_pct": 27.946495569559037,
+        "sharpe": 1.1685887509272732,
         "max_dd_pct": -5.8670355160625345,
         "win_rate_pct": 69.93865030674846,
         "payoff": 2.5650747548154613,
@@ -2290,14 +2290,24 @@
         "avg_loss_pct": -1.6547823243332593,
         "profit_factor": 5.967724939774748
       },
-      "last_close": 184.8040008544922,
-      "last_date": "2026-06-18T00:00:00"
+      "last_close": 184.84800720214844,
+      "last_date": "2026-06-19T00:00:00"
     },
     "GBPJPY": {
       "pair": "GBPJPY",
       "current_equity": 5640972.996649542,
       "today_signal": null,
-      "open_position": null,
+      "open_position": {
+        "entry_date": "2026-06-19T00:00:00",
+        "direction": 1,
+        "entry_price": 213.05299377441406,
+        "current_price": 212.95700073242188,
+        "stop_price": 213.12647058936338,
+        "target_price": 214.44134826660155,
+        "leverage": 20.0,
+        "unrealized_pnl_pct": -0.009011189215564592,
+        "hold_days": 0
+      },
       "yesterday_result": null,
       "recent_trades": [
         {
@@ -3420,8 +3430,8 @@
       "metrics": {
         "trades": 162,
         "total_return_pct": 5540.9729966495415,
-        "cagr_pct": 30.85618078007859,
-        "sharpe": 0.9054583744919805,
+        "cagr_pct": 30.849756881603653,
+        "sharpe": 0.9053421135318349,
         "max_dd_pct": -8.47757822807079,
         "win_rate_pct": 63.580246913580254,
         "payoff": 3.344870949405144,
@@ -3430,8 +3440,8 @@
         "avg_loss_pct": -1.643827035651229,
         "profit_factor": 5.839350979469998
       },
-      "last_close": 213.59500122070312,
-      "last_date": "2026-06-18T00:00:00"
+      "last_close": 212.95700073242188,
+      "last_date": "2026-06-19T00:00:00"
     }
   }
 }
