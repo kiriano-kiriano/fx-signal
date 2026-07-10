@@ -10,7 +10,7 @@
     "account_balance": 100000.0,
     "risk_per_trade": 0.02,
     "max_leverage": 20.0,
-    "generated_at": "2026-07-09T23:46:00.548681"
+    "generated_at": "2026-07-10T23:28:48.237215"
   },
   "pairs": {
     "USDJPY": {
@@ -1150,7 +1150,7 @@
         "avg_loss_pct": -1.7840204377054907,
         "profit_factor": 4.880263981134231
       },
-      "last_close": 162.3509979248047,
+      "last_close": 161.6719970703125,
       "last_date": "2026-07-10T00:00:00"
     },
     "EURJPY": {
@@ -2290,7 +2290,7 @@
         "avg_loss_pct": -1.6547823243322566,
         "profit_factor": 6.098124029409609
       },
-      "last_close": 185.625,
+      "last_close": 184.5540008544922,
       "last_date": "2026-07-10T00:00:00"
     },
     "GBPJPY": {
@@ -3430,7 +3430,7 @@
         "avg_loss_pct": -1.6518573520315147,
         "profit_factor": 5.876058466506994
       },
-      "last_close": 217.75,
+      "last_close": 216.68800354003906,
       "last_date": "2026-07-10T00:00:00"
     }
   }
