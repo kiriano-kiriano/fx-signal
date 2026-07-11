@@ -10,7 +10,7 @@
     "account_balance": 100000.0,
     "risk_per_trade": 0.02,
     "max_leverage": 20.0,
-    "generated_at": "2026-07-10T23:28:48.237215"
+    "generated_at": "2026-07-11T23:27:24.567317"
   },
   "pairs": {
     "USDJPY": {
