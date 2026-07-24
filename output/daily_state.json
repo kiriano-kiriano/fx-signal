@@ -10,7 +10,7 @@
     "account_balance": 100000.0,
     "risk_per_trade": 0.02,
     "max_leverage": 20.0,
-    "generated_at": "2026-07-23T23:28:26.733403"
+    "generated_at": "2026-07-24T23:32:42.950469"
   },
   "pairs": {
     "USDJPY": {
@@ -21,11 +21,11 @@
         "entry_date": "2026-07-24T00:00:00",
         "direction": -1,
         "entry_price": 163.76199340820312,
-        "current_price": 163.8090057373047,
+        "current_price": 163.79100036621094,
         "stop_price": 163.38522828365433,
         "target_price": 162.25720138549804,
         "leverage": 8.69305478336509,
-        "unrealized_pnl_pct": -0.002495577538280016,
+        "unrealized_pnl_pct": -0.0015397899708764395,
         "hold_days": 0
       },
       "yesterday_result": null,
@@ -1160,7 +1160,7 @@
         "avg_loss_pct": -1.7840204377032642,
         "profit_factor": 4.880263981141233
       },
-      "last_close": 163.8090057373047,
+      "last_close": 163.79100036621094,
       "last_date": "2026-07-24T00:00:00"
     },
     "EURJPY": {
@@ -2300,7 +2300,7 @@
         "avg_loss_pct": -1.65478232433236,
         "profit_factor": 6.098124029409112
       },
-      "last_close": 186.40699768066406,
+      "last_close": 186.2449951171875,
       "last_date": "2026-07-24T00:00:00"
     },
     "GBPJPY": {
@@ -3440,7 +3440,7 @@
         "avg_loss_pct": -1.6518573520316469,
         "profit_factor": 5.876058466506576
       },
-      "last_close": 218.11300659179688,
+      "last_close": 218.29100036621094,
       "last_date": "2026-07-24T00:00:00"
     }
   }
