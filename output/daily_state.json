@@ -10,7 +10,7 @@
     "account_balance": 100000.0,
     "risk_per_trade": 0.02,
     "max_leverage": 20.0,
-    "generated_at": "2026-09-12T00:27:54.638992"
+    "generated_at": "2026-09-13T00:08:07.326701"
   },
   "pairs": {
     "USDJPY": {
@@ -2280,8 +2280,8 @@
       "metrics": {
         "trades": 164,
         "total_return_pct": 4284.454770949499,
-        "cagr_pct": 28.669622286031803,
-        "sharpe": 1.1882628490300868,
+        "cagr_pct": 28.66370258943647,
+        "sharpe": 1.188109996747675,
         "max_dd_pct": -5.86703551606197,
         "win_rate_pct": 70.1219512195122,
         "payoff": 2.579488916386896,
@@ -2290,8 +2290,8 @@
         "avg_loss_pct": -1.6621993857662571,
         "profit_factor": 6.053902558867202
       },
-      "last_close": 178.14199829101562,
-      "last_date": "2026-09-11T00:00:00"
+      "last_close": 177.25,
+      "last_date": "2026-09-12T00:00:00"
     },
     "GBPJPY": {
       "pair": "GBPJPY",
