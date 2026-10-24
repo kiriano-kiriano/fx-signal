@@ -10,7 +10,7 @@
     "account_balance": 100000.0,
     "risk_per_trade": 0.02,
     "max_leverage": 20.0,
-    "generated_at": "2026-10-23T00:49:43.160509"
+    "generated_at": "2026-10-24T00:56:41.160945"
   },
   "pairs": {
     "USDJPY": {
@@ -21,11 +21,11 @@
         "entry_date": "2026-10-23T00:00:00",
         "direction": 1,
         "entry_price": 156.7740020751953,
-        "current_price": 156.35000610351562,
+        "current_price": 156.81399536132812,
         "stop_price": 157.07332707994138,
         "target_price": 158.02570114135742,
         "leverage": 10.47516910310886,
-        "unrealized_pnl_pct": -0.02833014047986979,
+        "unrealized_pnl_pct": 0.0026722315542425856,
         "hold_days": 0
       },
       "yesterday_result": null,
@@ -1160,13 +1160,24 @@
         "avg_loss_pct": -1.7776564779098634,
         "profit_factor": 5.015632234094752
       },
-      "last_close": 156.35000610351562,
+      "last_close": 156.81399536132812,
       "last_date": "2026-10-23T00:00:00"
     },
     "EURJPY": {
       "pair": "EURJPY",
       "current_equity": 4292552.133406744,
-      "today_signal": null,
+      "today_signal": {
+        "pair": "EURJPY",
+        "direction": 1,
+        "direction_label": "買い",
+        "entry_price_est": 175.72300720214844,
+        "stop_price": 175.6529648520572,
+        "target_price": 177.56940002441405,
+        "estimated_leverage": 20.0,
+        "stop_distance_pct": 0.039859521645138105,
+        "target_distance_pct": 1.050740510115194,
+        "signal_date": "2026-10-23T00:00:00"
+      },
       "open_position": null,
       "yesterday_result": null,
       "recent_trades": [
@@ -2300,7 +2311,7 @@
         "avg_loss_pct": -1.6708774350416855,
         "profit_factor": 5.902011150384984
       },
-      "last_close": 175.4770050048828,
+      "last_close": 175.72300720214844,
       "last_date": "2026-10-23T00:00:00"
     },
     "GBPJPY": {
@@ -3452,7 +3463,7 @@
         "avg_loss_pct": -1.6143328969681094,
         "profit_factor": 6.03248017251255
       },
-      "last_close": 209.58200073242188,
+      "last_close": 209.7760009765625,
       "last_date": "2026-10-23T00:00:00"
     }
   }
