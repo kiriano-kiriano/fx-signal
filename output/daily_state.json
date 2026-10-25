@@ -10,7 +10,7 @@
     "account_balance": 100000.0,
     "risk_per_trade": 0.02,
     "max_leverage": 20.0,
-    "generated_at": "2026-10-24T00:56:41.160945"
+    "generated_at": "2026-10-25T00:27:10.642659"
   },
   "pairs": {
     "USDJPY": {
@@ -1166,18 +1166,7 @@
     "EURJPY": {
       "pair": "EURJPY",
       "current_equity": 4292552.133406744,
-      "today_signal": {
-        "pair": "EURJPY",
-        "direction": 1,
-        "direction_label": "買い",
-        "entry_price_est": 175.72300720214844,
-        "stop_price": 175.6529648520572,
-        "target_price": 177.56940002441405,
-        "estimated_leverage": 20.0,
-        "stop_distance_pct": 0.039859521645138105,
-        "target_distance_pct": 1.050740510115194,
-        "signal_date": "2026-10-23T00:00:00"
-      },
+      "today_signal": null,
       "open_position": null,
       "yesterday_result": null,
       "recent_trades": [
@@ -2301,8 +2290,8 @@
       "metrics": {
         "trades": 165,
         "total_return_pct": 4192.552133406744,
-        "cagr_pct": 28.48801142461539,
-        "sharpe": 1.1818428571720752,
+        "cagr_pct": 28.482133205175163,
+        "sharpe": 1.1816908398570845,
         "max_dd_pct": -5.867035516059095,
         "win_rate_pct": 69.6969696969697,
         "payoff": 2.56609180451521,
@@ -2311,8 +2300,8 @@
         "avg_loss_pct": -1.6708774350416855,
         "profit_factor": 5.902011150384984
       },
-      "last_close": 175.72300720214844,
-      "last_date": "2026-10-23T00:00:00"
+      "last_close": 175.5,
+      "last_date": "2026-10-24T00:00:00"
     },
     "GBPJPY": {
       "pair": "GBPJPY",
