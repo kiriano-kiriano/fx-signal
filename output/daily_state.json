@@ -10,7 +10,7 @@
     "account_balance": 100000.0,
     "risk_per_trade": 0.02,
     "max_leverage": 20.0,
-    "generated_at": "2026-11-07T02:11:39.431348"
+    "generated_at": "2026-11-08T01:42:45.409046"
   },
   "pairs": {
     "USDJPY": {
@@ -1140,8 +1140,8 @@
       "metrics": {
         "trades": 157,
         "total_return_pct": 2875.32452946724,
-        "cagr_pct": 25.386007059826564,
-        "sharpe": 1.2084140732358342,
+        "cagr_pct": 25.38083000274409,
+        "sharpe": 1.208258519572084,
         "max_dd_pct": -12.330891862579056,
         "win_rate_pct": 67.51592356687898,
         "payoff": 2.4234104440028577,
@@ -1150,8 +1150,8 @@
         "avg_loss_pct": -1.7776564779101773,
         "profit_factor": 5.0368922953784905
       },
-      "last_close": 157.4980010986328,
-      "last_date": "2026-11-06T00:00:00"
+      "last_close": 158.4250030517578,
+      "last_date": "2026-11-07T00:00:00"
     },
     "EURJPY": {
       "pair": "EURJPY",
@@ -2280,8 +2280,8 @@
       "metrics": {
         "trades": 165,
         "total_return_pct": 4192.552133409914,
-        "cagr_pct": 28.488011424621718,
-        "sharpe": 1.1818428571722606,
+        "cagr_pct": 28.48213320518149,
+        "sharpe": 1.1816908398572694,
         "max_dd_pct": -5.867035516057385,
         "win_rate_pct": 69.6969696969697,
         "payoff": 2.5660918045163106,
@@ -2290,8 +2290,8 @@
         "avg_loss_pct": -1.670877435041132,
         "profit_factor": 5.902011150387516
       },
-      "last_close": 176.8209991455078,
-      "last_date": "2026-11-06T00:00:00"
+      "last_close": 176.33999633789062,
+      "last_date": "2026-11-07T00:00:00"
     },
     "GBPJPY": {
       "pair": "GBPJPY",
@@ -2301,26 +2301,14 @@
         "entry_date": "2026-11-05T00:00:00",
         "direction": -1,
         "entry_price": 213.375,
-        "current_price": 211.88999938964844,
+        "current_price": 211.5469970703125,
         "stop_price": 213.00066388806349,
         "target_price": 210.3707015991211,
         "leverage": 11.400182520258006,
-        "unrealized_pnl_pct": 0.07934049443797236,
-        "hold_days": 1
+        "unrealized_pnl_pct": 0.09766639506035789,
+        "hold_days": 2
       },
-      "yesterday_result": {
-        "entry_date": "2026-11-04T00:00:00",
-        "exit_date": "2026-11-05T00:00:00",
-        "direction": -1,
-        "entry_price": 212.92300415039062,
-        "exit_price": 212.43804595423234,
-        "stop_price": 212.43804595423234,
-        "target_price": 210.2282516479492,
-        "leverage": 8.781086940569754,
-        "pnl_pct": 0.019175186638418124,
-        "reason": "stop",
-        "hold_days": 1
-      },
+      "yesterday_result": null,
       "recent_trades": [
         {
           "entry_date": "2024-06-27T00:00:00",
@@ -3442,8 +3430,8 @@
       "metrics": {
         "trades": 167,
         "total_return_pct": 6724.774042867357,
-        "cagr_pct": 32.522399965048756,
-        "sharpe": 0.9384103687463815,
+        "cagr_pct": 32.51558943438708,
+        "sharpe": 0.9382898786213558,
         "max_dd_pct": -8.477578228066294,
         "win_rate_pct": 64.07185628742515,
         "payoff": 3.393800178066384,
@@ -3452,8 +3440,8 @@
         "avg_loss_pct": -1.6143328969689605,
         "profit_factor": 6.052276984218386
       },
-      "last_close": 211.88999938964844,
-      "last_date": "2026-11-06T00:00:00"
+      "last_close": 211.5469970703125,
+      "last_date": "2026-11-07T00:00:00"
     }
   }
 }
