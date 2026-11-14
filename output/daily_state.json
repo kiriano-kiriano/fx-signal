@@ -10,13 +10,24 @@
     "account_balance": 100000.0,
     "risk_per_trade": 0.02,
     "max_leverage": 20.0,
-    "generated_at": "2026-11-13T02:48:18.775267"
+    "generated_at": "2026-11-14T02:36:33.525773"
   },
   "pairs": {
     "USDJPY": {
       "pair": "USDJPY",
       "current_equity": 3032546.0105233723,
-      "today_signal": null,
+      "today_signal": {
+        "pair": "USDJPY",
+        "direction": -1,
+        "direction_label": "売り",
+        "entry_price_est": 159.875,
+        "stop_price": 160.0218992212834,
+        "target_price": 158.08579940795897,
+        "estimated_leverage": 20.0,
+        "stop_distance_pct": 0.09188379751893996,
+        "target_distance_pct": 1.1191246861867252,
+        "signal_date": "2026-11-13T00:00:00"
+      },
       "open_position": null,
       "yesterday_result": {
         "entry_date": "2026-11-12T00:00:00",
@@ -1162,7 +1173,7 @@
         "avg_loss_pct": -1.7776564779091342,
         "profit_factor": 5.058105522208779
       },
-      "last_close": 159.93699645996094,
+      "last_close": 159.875,
       "last_date": "2026-11-13T00:00:00"
     },
     "EURJPY": {
@@ -2302,7 +2313,7 @@
         "avg_loss_pct": -1.6972979760687936,
         "profit_factor": 5.92871331770962
       },
-      "last_close": 176.85699462890625,
+      "last_close": 176.65899658203125,
       "last_date": "2026-11-13T00:00:00"
     },
     "GBPJPY": {
@@ -2313,11 +2324,11 @@
         "entry_date": "2026-11-05T00:00:00",
         "direction": -1,
         "entry_price": 213.375,
-        "current_price": 211.66700744628906,
+        "current_price": 211.53599548339844,
         "stop_price": 213.00066388806343,
         "target_price": 210.3707015991211,
         "leverage": 11.400182520256276,
-        "unrealized_pnl_pct": 0.09125449024273372,
+        "unrealized_pnl_pct": 0.09825418697051425,
         "hold_days": 8
       },
       "yesterday_result": null,
@@ -3452,7 +3463,7 @@
         "avg_loss_pct": -1.6143328969686879,
         "profit_factor": 6.052276984219461
       },
-      "last_close": 211.66700744628906,
+      "last_close": 211.53599548339844,
       "last_date": "2026-11-13T00:00:00"
     }
   }
