@@ -10,7 +10,7 @@
     "account_balance": 100000.0,
     "risk_per_trade": 0.02,
     "max_leverage": 20.0,
-    "generated_at": "2026-11-27T04:25:32.660034"
+    "generated_at": "2026-11-28T04:05:24.223585"
   },
   "pairs": {
     "USDJPY": {
@@ -21,11 +21,11 @@
         "entry_date": "2026-11-16T00:00:00",
         "direction": -1,
         "entry_price": 159.77000427246094,
-        "current_price": 159.20599365234375,
+        "current_price": 159.281005859375,
         "stop_price": 160.0218992212835,
         "target_price": 158.08579940795897,
         "leverage": 12.685447248488547,
-        "unrealized_pnl_pct": 0.04478141564597263,
+        "unrealized_pnl_pct": 0.0388255830751423,
         "hold_days": 11
       },
       "yesterday_result": null,
@@ -1160,7 +1160,7 @@
         "avg_loss_pct": -1.7776564779101536,
         "profit_factor": 5.037047338207076
       },
-      "last_close": 159.20599365234375,
+      "last_close": 159.281005859375,
       "last_date": "2026-11-27T00:00:00"
     },
     "EURJPY": {
@@ -1171,11 +1171,11 @@
         "entry_date": "2026-11-25T00:00:00",
         "direction": 1,
         "entry_price": 174.60400390625,
-        "current_price": 174.74099731445312,
+        "current_price": 174.7239990234375,
         "stop_price": 173.37861500236392,
         "target_price": 176.14705123901368,
         "leverage": 2.8497728901008825,
-        "unrealized_pnl_pct": 0.0022359172303368638,
+        "unrealized_pnl_pct": 0.0019584821897270102,
         "hold_days": 2
       },
       "yesterday_result": null,
@@ -2310,7 +2310,7 @@
         "avg_loss_pct": -1.697171192841477,
         "profit_factor": 5.719019324747914
       },
-      "last_close": 174.74099731445312,
+      "last_close": 174.7239990234375,
       "last_date": "2026-11-27T00:00:00"
     },
     "GBPJPY": {
@@ -3450,7 +3450,7 @@
         "avg_loss_pct": -1.6022718186401577,
         "profit_factor": 6.372990692256199
       },
-      "last_close": 208.86700439453125,
+      "last_close": 208.76199340820312,
       "last_date": "2026-11-27T00:00:00"
     }
   }
